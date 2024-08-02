@@ -1,0 +1,347 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Includes padding and border in the element’s total width and height */
+}
+
+/* Styles for header */
+.header-container {
+    position: relative; /* Ensures child elements position correctly */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    gap: 40px;
+    padding: 30px 80px;
+}
+
+/* Styles for navigation */
+.header-nav {
+    display: flex; /* Flex container for nav and icons */
+    align-items: center;
+    gap: 90px; /* Space between nav items and icons */
+}
+
+.header-nav ul {
+    list-style-type: none; /* Remove bullet points */
+    margin: 0;
+    padding: 10px 0 10px 0; /* Adjust padding as needed */
+    display: flex;
+    gap: 30px; /* Space between nav items */
+    align-items: center;
+}
+
+nav a {
+    font-size: 18px;
+    color: #FFFFFF;
+    font-family: "Montserrat";
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.icons {
+    display: flex; /* Flexbox layout for aligning icons */
+    gap: 20px; /* Space between icons */
+    align-items: center; /* Align icons vertically to the center */
+    height: auto; /* Allow container height to adjust based on content */
+}
+
+.icon {
+    color: #FFFFFF;
+    width: 24px;
+    height: 24px;
+}
+
+.logo h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 50px; /* Adjust font size as needed */
+    margin: 0; /* Remove default margin */
+    background: linear-gradient(45deg, #03346E, #04C1FD); /* Gradient colors */
+    background-clip: text; /* Clips background to text for other browsers */
+    color: transparent; /* Makes the text color transparent to show the gradient */
+}
+
+/* Hamburger Button */
+.hamburger {
+    display: none; /* Hidden by default */
+    font-size: 30px; /* Button size */
+    background: none; /* No background */
+    border: none; /* No border */
+    color: white; /* Button color */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+.main {
+    position: relative;
+    width: 100%;
+    height: 560px; /* Adjust as needed */
+    overflow: hidden;
+    padding: 0 80px;
+}
+
+.main svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the SVG covers the container */
+}
+
+.main-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff; 
+    width: 80%; /* Adjust width as needed */
+
+    z-index: 1; 
+}
+
+.text-content {
+    text-align: left; /* Align text to the left */
+    margin-right: 50px; /* Space between text and image */
+}
+
+.main-image {
+    width: 400px; 
+    height: auto;
+    border-radius: 40px; 
+}
+
+.text-content h1 {
+    font-size: 48px;
+    font-family: "Montserrat";
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.text-content p {
+    font-size: 18px; 
+    font-family: "Montserrat";
+}
+
+.footer-container{
+    background-color: #000000;
+    align-items: center;
+    padding: 30px 0 30px 0
+
+}
+.footer-info p {
+    font-size: 15px;
+    color:#FFFFFF;
+    font-family: "Montserrat";
+    text-decoration: none;
+    font-weight: 500;
+    text-align: center;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center; /* Center icons horizontally */
+    gap: 20px; /* Space between icons */
+}
+
+.footer-icon {
+    color: #FFFFFF;
+    width: 24px;
+    height: 24px;
+}
+
+.footer-icons {
+    display: flex; /* Flexbox layout for aligning icons */
+    gap: 20px; /* Space between icons */
+    align-items: center; /* Align icons vertically to the center */
+    height: auto; /* Allow container height to adjust based on content */
+    justify-content: center;
+    padding: 0 0 20px 0;
+}
+
+.contact-button {
+    color: #000000;
+    background-color: #FFFFFF;
+    font-family: "Montserrat";
+    font-size: 18px;
+    border-radius: 12px;
+    padding: 10px 20px; /* Adjust padding as needed */
+    text-decoration: none;
+    margin: 20px; /* Center horizontally and add space above */
+    display: block; /* Makes the button respect padding and align properly */
+    width: fit-content; /* Ensures the button width only fits the content */
+}
+
+/* Responsiveness */
+@media (min-width: 1200px) {
+    .text-content {
+        width: 50%;
+    }
+}
+@media (max-width: 991px) {
+    .main {
+        height: 400px;
+        padding: 20px 50px;
+    }
+    .text-content {
+        margin-right: 60px; /* Space between text and image */
+    }
+
+    .text-content h1 {
+        font-size: 35px;
+        margin-bottom: 10px;
+    }
+    
+    .text-content p {
+        font-size: 15px; 
+        
+    }
+
+    .main-image {
+        width: 300px; 
+        height: auto;
+        border-radius: 40px; 
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+
+}
+@media (max-width: 767px) {
+    .main {
+        height: 500px;
+    }
+    .header-nav ul {
+        display: none; /* Hidden by default */
+        flex-direction: column;
+        position: absolute;
+        top: 100%; /* Position right below the header */
+        left: 0;
+        background-color: #000;
+        width: 100%;
+        gap: 10px;
+        padding: 10px;
+        z-index: 1000; /* Ensure it's on top of other elements */
+    }
+
+    .header-nav ul.show {
+        display: flex; /* Show menu when .show is added */
+        margin-top: -25px;
+    }
+
+    nav a {
+        font-size: 15px;
+    }
+
+    .logo h1 {
+        font-size: 35px;
+    }
+
+    .icons {
+        display: none; /* Hidden by default */
+    }
+
+    .icons.show {
+        display: flex !important;
+        flex-direction: row; /* Ensure icons are in a row */
+        align-items: center;
+        justify-content: center;
+        background-color: #000;
+        width: 100%;
+        gap: 10px;
+        padding: 10px 80px 10px 10px;
+        z-index: 1000; /* Ensure it's on top of other content */
+    }
+
+    .hamburger {
+        display: block; /* Show the hamburger button */
+    }
+
+    /* Combine icons with nav for mobile */
+    .header-nav.show .icons {
+        display: flex !important;
+    }
+
+    .main-content {
+        /* Stacks the items vertically */
+        flex-direction:column-reverse;
+        align-items: center;
+    }
+
+    .main-image {
+        padding: 20px 0 20px 0;
+        width: 300px;
+        border-radius: 40px;
+    }
+
+    .text-content {
+        width: 70%;
+        margin: 0;
+    }
+
+    .text-content h1 {
+        width: 100%;
+        text-align: center;
+        font-size: 38px;
+    }
+
+    .text-content p {
+        text-align: center;
+    }
+
+    .contact-button {
+        margin-left: auto; /* Center the button */
+        margin-right: auto; /* Center the button */
+        display: block; /* Ensure the button is a block element for centering */
+        width: fit-content; /* Ensures the button width only fits the content */
+    }
+}
+
+/* CSS for extra small devices */
+@media (max-width: 575px) { 
+    .header-container {
+        padding: 30px 30px;
+    }
+
+    .logo h1 {
+        font-size: 30px;
+    }
+
+    .main {
+        height: 500px;
+    }
+
+    .main-image {
+        width: 220px;
+        border-radius: 40px;
+    }
+
+    .text-content {
+        width: 100%;
+        margin: 0;
+    }
+
+    .text-content h1 {
+        font-size: 30px;
+    }
+
+    .icon {
+        height: 16px;
+        width: 16px;
+    }
+
+@media (max-width: 300px) {
+    .main {
+        height: 550px;
+    }
+}
+
+@media (max-width: 230px){
+    .main {
+        height: 600px;
+    }
+}
+}
