@@ -2,7 +2,7 @@
 
 <main>
     <section class="main">
-        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" preserveAspectRatio="xMidYMid slice" viewBox="0 0 1440 560">
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" preserveAspectRatio="xMidYMid slice" viewBox="0 0 1440 560">
             <g mask="url(#SvgjsMask2375)" fill="none">
                 <rect width="1440" height="560" x="0" y="0" fill="url(#SvgjsLinearGradient2376)"></rect>
                 <path d="M965.9531965504883 201.18987819360328L1057.2608674819467 215.6515925514192 980.4149109083043 109.88220726214493z" fill="rgba(26, 96, 180, 1)" class="triangle-float3"></path>
@@ -62,6 +62,14 @@
             <img src="images/profile.jpg" alt="Picture of Christopher Anciano" class="main-image">
         </div>
     </section>
+    <!-- Includes About Section -->
+    <?php include 'about.php'; ?>
+
+    <!-- Includes Projects Section -->
+    <?php include 'projects.php'; ?>
+
+    <!-- Includes Contact Section -->
+    <?php include 'contact.php'; ?>
 </main>
 
 <?php include 'footer.php'; ?>

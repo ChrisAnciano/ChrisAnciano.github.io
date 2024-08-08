@@ -23,4 +23,4 @@
                 </a>
             </div>
         </div>
-        <p>Christopher Anciano &copy;2024</p>
+        <p>Christopher Anciano &copy;2024</p> 

@@ -9,7 +9,8 @@
     <title>Christopher Anciano's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-
+    <!-- Recaptcha -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
     <!-- Header Section -->
@@ -22,7 +23,7 @@
             <!-- Header Nav -->
 <nav class="header-nav">
     <ul>
-        <li><a href="#home">Home</a></li>
+        <li><a href="index.php">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
