@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
 <section id="contact" class="contact">
     <h2>Contact Me</h2>
-    <form class="contact-form" action="thank-you.php" method="POST">
+    <form class="contact-form" action="./thank-you.php" method="POST">
         <div class="form-group">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <textarea id="message" name="message" rows="6" required></textarea>
         </div>
         <div class="recaptcha-container">
-            <div class="g-recaptcha" data-sitekey="6LcAgiIqAAAAALJOiTzbiRYidU1KZU0_DNqeYp95"></div>
+            <div class="g-recaptcha" data-sitekey="6LcAgiIqAAAAALJOiTzbiRYidU1KZU0_DNqeYp95" required></div>
         </div>
         <button type="submit">Submit</button>
     </form>
